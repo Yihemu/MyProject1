@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    # 使用开发环境
+    active: dev
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idel: 8
+      min-idel: 0
+    timeout: 0
+mybatis:
+  configuration:
+    # 驼峰转换
+    map-underscore-to-camel-case: true
+    # 默认缓存数量
+    default-fetch-size: 100
+    # SQL执行的超时时间
+    default-statement-timeout: 3000
+    # 日志输出到控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
